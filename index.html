@@ -1,139 +1,389 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kuruvanshi Krishi Farm House | Premium Quality Seeds</title>
-<meta name="description" content="Premium quality seeds available from Seenu Farmhouse. Check seed varieties, prices and quantities and contact us for orders.">
-<style>
-:root{--green:#176b3a;--dark:#0b2d1a;--light:#f5f8f1;--gold:#d6a93a;--white:#fff;--cream:#fffaf0}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuruvanshi Krishi Farm House - Jhanjhankheda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1b4d3e;
+            --secondary: #d4af37;
+            --accent: #2e7d32;
+            --bg-color: #f4f7f4;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+        }
 
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--light);color:#1d2a22;line-height:1.6}
-header{background:linear-gradient(135deg,#123522,#2f7d46);color:white;padding:18px 6%;position:sticky;top:0;z-index:10;box-shadow:0 4px 20px #071f1028}
-.nav{max-width:1150px;margin:auto;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:800}.logo span{color:#f0c44f}
-nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px}
-.hero{padding:75px 6%;background:linear-gradient(#123522cc,#123522cc),url('') center/cover; color:#fff}
-.hero-inner{max-width:1150px;margin:auto}
-.badge{display:inline-block;background:#ffffff1c;border:1px solid #ffffff44;padding:7px 13px;border-radius:30px;margin-bottom:15px}
-h1{font-size:clamp(36px,6vw,64px);line-height:1.08;margin-bottom:18px}
-.hero p{max-width:650px;font-size:18px;color:#e8f1e9}
-.buttons{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:13px 20px;border-radius:9px;text-decoration:none;font-weight:700;display:inline-block}
-.primary{background:#e7b83d;color:#17351f}.secondary{border:1px solid #ffffff66;color:white}
-.container{max-width:1150px;margin:auto;padding:65px 6%}
-.section-title{text-align:center;margin-bottom:35px}
-.section-title h2{font-size:34px;color:var(--dark)}
-.section-title p{color:#66746b}
-.seeds{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{background:#fff;border-radius:16px;padding:23px;box-shadow:0 5px 22px #15351b12;border:1px solid #e5ece5}
-.seed-icon{font-size:38px}.card h3{margin:10px 0 8px;color:var(--dark)}
-.price{font-size:24px;font-weight:800;color:var(--green);margin:12px 0}
-.tag{display:inline-block;background:#e8f4e9;color:var(--green);padding:5px 9px;border-radius:20px;font-size:12px;font-weight:700}
-.card ul{list-style:none;margin:12px 0;color:#59665d}
-.card li{margin:5px 0}.card li::before{content:'✓ ';color:var(--green);font-weight:bold}
-.order{background:var(--dark);color:white;border-radius:20px;padding:40px}
-.order h2{font-size:32px;margin-bottom:10px}.order p{color:#d8e7db}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:25px}
-.contact{background:#ffffff12;padding:20px;border:1px solid #ffffff1c;border-radius:12px}
-.contact b{display:block;color:#f0c44f;margin-bottom:5px}
-.contact a{color:white;text-decoration:none;word-break:break-word}
-footer{text-align:center;padding:25px;color:#68756c;font-size:13px}
-@media(max-width:650px){nav{display:none}.hero{padding:55px 6%}.container{padding:48px 6%}}
-.lang{display:flex;gap:6px;margin-left:10px}.lang button{border:1px solid #ffffff66;background:#ffffff12;color:#fff;padding:6px 9px;border-radius:18px;cursor:pointer;font-weight:700}.lang button.active{background:#f0c44f;color:#17351f;border-color:#f0c44f}
-.card{transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 12px 30px #15351b1c}
-</style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #0f2e23);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-size: 1.8rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #d35400;
+            margin-bottom: 1rem;
+        }
+
+        .product-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.2rem;
+        }
+
+        .booking-box {
+            background: #f9fbf9;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e0e6e0;
+        }
+
+        .form-group {
+            margin-bottom: 0.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #444;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .btn-book {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 0.5rem;
+        }
+
+        .btn-book:hover {
+            background: var(--accent);
+        }
+
+        /* Modal / Success Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .timer {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c0392b;
+            margin: 1rem 0;
+            background: #fdecea;
+            padding: 0.5rem;
+            border-radius: 6px;
+        }
+
+        .close-btn {
+            background: #7f8c8d;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #11221b;
+            color: #aaa;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <div class="nav">
-    <div class="logo">🌱 Kuruvanshi <span>Krishi Farm House</span></div>
-    <nav><a href="#seeds">Seeds</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-  </div>
-</header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="badge">🌾 Premium Quality Seeds</div>
-    <h1 data-en="Achhi fasal ki shuruaat,<br>achhe beej se." data-hi="अच्छी फसल की शुरुआत,<br>अच्छे बीज से।">Achhi fasal ki shuruaat,<br>achhe beej se.</h1><p style='margin-top:14px;font-weight:700;color:#f0c44f'>Jhanjhankheda</p>
-    <p data-en="Hamare farmhouse se premium quality seeds — variety, quantity aur price ki complete information ek hi jagah." data-hi="हमारे फार्महाउस से प्रीमियम क्वालिटी के बीज — किस्म, मात्रा और कीमत की पूरी जानकारी एक ही जगह।">Hamare farmhouse se premium quality seeds — variety, quantity aur price ki complete information ek hi jagah.</p>
-    <div class="buttons">
-      <a class="btn primary" href="#seeds">🌱 Seeds Dekhein</a>
-      <a class="btn secondary" href="#contact">📞 Contact Karein</a>
+    <header>
+        <h1>🌾 Kuruvanshi Krishi Farm House</h1>
+        <p>शुद्ध और उच्च quality फसलें सीधे किसान से — झांझंखेड़ा, गाadarwara, नरसिंहपुर (म.प्र.)</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">हमारी प्रीमियम फसलें एवं किस्में (Our Premium Crops)</h2>
+        
+        <div class="products-grid">
+
+            <!-- 1. Moong Variant 1 -->
+            <div class="product-card">
+                <div>
+                    <div class="product-name">🌿 मूंग (MH1142 - प्रीमियम वैरायटी)</div>
+                    <div class="product-price">₹ 9,200 / क्विंटल (Quintal)</div>
+                    <div class="product-desc">उच्च गुणवत्ता वाली चमकदर मूंग, कीट मुक्त और साफ-सुथरी।</div>
+                </div>
+                <div class="booking-box">
+                    <div class="form-group">
+                        <label>मात्रा (Quantity in Quintal/Kg):</label>
+                        <input type="text" id="qty-moong1" placeholder="जैसे: 2 क्विंटल">
+                    </div>
+                    <button class="btn-book" onclick="bookCrop('मूंग MH1142', '₹9,200/क्विंटल', 'qty-moong1')">बुकिंग करें (Book Now)</button>
+                </div>
+            </div>
+
+            <!-- 2. Moong Variant 2 -->
+            <div class="product-card">
+                <div>
+                    <div class="product-name">🌱 मूंग (लोकल / सामान्य वैरायटी)</div>
+                    <div class="product-price">₹ 8,800 / क्विंटल (Quintal)</div>
+                    <div class="product-desc">बढ़िया क्वालिटी की दानेदार मूंग दाल बीज एवं खाने हेतु।</div>
+                </div>
+                <div class="booking-box">
+                    <div class="form-group">
+                        <label>मात्रा (Quantity):</label>
+                        <input type="text" id="qty-moong2" placeholder="जैसे: 5 क्विंटल">
+                    </div>
+                    <button class="btn-book" onclick="bookCrop('मूंग (लोकल)', '₹8,800/क्विंटल', 'qty-moong2')">बुकिंग करें (Book Now)</button>
+                </div>
+            </div>
+
+            <!-- 3. Gehu -->
+            <div class="product-card">
+                <div>
+                    <div class="product-name">🌾 गेहूं (शर्बती / लोकवन)</div>
+                    <div class="product-price">₹ 2,750 / क्विंटल (Quintal)</div>
+                    <div class="product-desc">मोटे और गोल्डन दाने, खाने में अति स्वादिष्ट और शुद्ध गेहूं।</div>
+                </div>
+                <div class="booking-box">
+                    <div class="form-group">
+                        <label>मात्रा (Quantity):</label>
+                        <input type="text" id="qty-gehu" placeholder="जैसे: 10 क्विंटल">
+                    </div>
+                    <button class="btn-book" onclick="bookCrop('गेहूं (शर्बती)', '₹2,750/क्विंटल', 'qty-gehu')">बुकिंग करें (Book Now)</button>
+                </div>
+            </div>
+
+            <!-- 4. Chana -->
+            <div class="product-card">
+                <div>
+                    <div class="product-name">🟡 चना (विशाल / देशी चना)</div>
+                    <div class="product-price">₹ 5,800 / क्विंटल (Quintal)</div>
+                    <div class="product-desc">साफ-सुथरा, पौष्टिक और बड़े आकार का नया चना।</div>
+                </div>
+                <div class="booking-box">
+                    <div class="form-group">
+                        <label>मात्रा (Quantity):</label>
+                        <input type="text" id="qty-chana" placeholder="जैसे: 3 क्विंटल">
+                    </div>
+                    <button class="btn-book" onclick="bookCrop('चना (देशी)', '₹5,800/क्विंटल', 'qty-chana')">बुकिंग करें (Book Now)</button>
+                </div>
+            </div>
+
+            <!-- 5. Soyabeen -->
+            <div class="product-card">
+                <div>
+                    <div class="product-name">🫘 सोयाबीन (प्रीमियम बीज)</div>
+                    <div class="product-price">₹ 4,900 / क्विंटल (Quintal)</div>
+                    <div class="product-desc">उन्नत किस्म का उच्च अंकुरण क्षमता वाला सोयाबीन।</div>
+                </div>
+                <div class="booking-box">
+                    <div class="form-group">
+                        <label>मात्रा (Quantity):</label>
+                        <input type="text" id="qty-soya" placeholder="जैसे: 5 क्विंटल">
+                    </div>
+                    <button class="btn-book" onclick="bookCrop('सोयाबीन', '₹4,900/क्विंटल', 'qty-soya')">बुकिंग करें (Book Now)</button>
+                </div>
+            </div>
+
+            <!-- 6. Dhaan -->
+            <div class="product-card">
+                <div>
+                    <div class="product-name">🍚 धान (1509 / बासमती धान)</div>
+                    <div class="product-price">₹ 3,400 / क्विंटल (Quintal)</div>
+                    <div class="product-desc">खुशबूदार और लंबी बासमती धान की फसल।</div>
+                </div>
+                <div class="booking-box">
+                    <div class="form-group">
+                        <label>मात्रा (Quantity):</label>
+                        <input type="text" id="qty-dhaan" placeholder="जैसे: 20 क्विंटल">
+                    </div>
+                    <button class="btn-book" onclick="bookCrop('धान (बासमती)', '₹3,400/क्विंटल', 'qty-dhaan')">बुकिंग करें (Book Now)</button>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
-</section>
 
-<section class="container" id="seeds">
-  <div class="section-title">
-    <h2 data-en="Available Seeds" data-hi="उपलब्ध बीज">Available Seeds</h2>
-    <p data-en="Apni requirement ke according variety aur quantity choose karein." data-hi="अपनी जरूरत के अनुसार किस्म और मात्रा चुनें।">Apni requirement ke according variety aur quantity choose karein.</p>
-  </div>
-
-  <div class="seeds">
-    <!-- Replace these sample cards with your actual seeds -->
-    <div class="card">
-      <div class="seed-icon">🌽</div><span class="tag">Premium Quality</span>
-      <h3>Maize Seed</h3>
-      <p>High-quality maize seed for farming.</p>
-      <div class="price">₹___ / kg</div>
-      <ul><li>Available: ___ kg</li><li>Variety: ______</li></ul>
+    <!-- Booking Success Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <h3>🎉 बुकिंग सफलताપूर्वक दर्ज हो गई है!</h3>
+            <p id="modal-details" style="margin-bottom: 0.5rem;"></p>
+            <p style="font-size: 0.9rem; color: #555;">यह बुकिंग केवल अगले 24 घंटे तक मान्य (Valid) रहेगी:</p>
+            <div class="timer" id="countdown">24:00:00</div>
+            <p style="font-size: 0.85rem; color: #777;">कृपया समय सीमा के भीतर फार्म पर संपर्क करें।</p>
+            <button class="close-btn" onclick="closeModal()">बंद करें</button>
+        </div>
     </div>
 
-    <div class="card">
-      <div class="seed-icon">🌾</div><span class="tag">Premium Quality</span>
-      <h3>Wheat Seed</h3>
-      <p>Selected quality wheat seed.</p>
-      <div class="price">₹___ / kg</div>
-      <ul><li>Available: ___ kg</li><li>Variety: ______</li></ul>
-    </div>
+    <footer>
+        <p>&copy; 2026 Kuruvanshi Krishi Farm House | Jhajhankheda, Gadarwara, Narsinghpur (MP)</p>
+    </footer>
 
-    <div class="card">
-      <div class="seed-icon">🌱</div><span class="tag">Premium Quality</span>
-      <h3>Soybean Seed</h3>
-      <p>Quality soybean seed for your farm.</p>
-      <div class="price">₹___ / kg</div>
-      <ul><li>Available: ___ kg</li><li>Variety: ______</li></ul>
-    </div>
-  </div>
-</section>
+    <script>
+        let timerInterval;
 
-<section class="container" id="about">
-  <div class="order">
-    <h2 data-en="Why choose our seeds?" data-hi="हमारे बीज क्यों चुनें?">Why choose our seeds?</h2>
-    <p>Hum quality, clear pricing aur direct communication par focus karte hain. Order se pehle seed variety, quantity aur current price confirm karein.</p>
-    <div class="contact-grid">
-      <div class="contact"><b>✓ Premium Quality</b>Selected seeds</div>
-      <div class="contact"><b>✓ Clear Pricing</b>Price aur quantity clearly listed</div>
-      <div class="contact"><b>✓ Direct Contact</b>Order ke liye seedha call/WhatsApp</div>
-    </div>
-  </div>
-</section>
+        function bookCrop(cropName, price, qtyId) {
+            let qty = document.getElementById(qtyId).value;
+            if(!qty) {
+                alert('कृपया मात्रा (Quantity) दर्ज करें!');
+                return;
+            }
 
-<section class="container" id="contact">
-  <div class="section-title">
-    <h2 data-en="Order / Enquiry" data-hi="ऑर्डर / पूछताछ">Order / Enquiry</h2>
-    <p>Price aur availability confirm karne ke liye contact karein.</p>
-  </div>
-  <div class="order">
-    <h2 data-en="Contact Us" data-hi="संपर्क करें">Contact Us</h2>
-    <p>Gmail par enquiry bhejein. Mobile/WhatsApp number baad mein add kiya ja sakta hai.</p>
-    <div class="contact-grid">
-      <div class="contact"><b>📱 Mobile / WhatsApp</b><span>Coming Soon</span></div>
-      <div class="contact"><b>✉️ Gmail</b><a href="mailto:sidkourav0@gmail.com">sidkourav0@gmail.com</a></div>
-    </div>
-  </div>
-</section>
+            document.getElementById('modal-details').innerHTML = `<b>फसल:</b> ${cropName}<br><b>रेट:</b> ${price}<br><b>मात्रा:</b> ${qty}`;
+            document.getElementById('bookingModal').style.display = 'flex';
+            
+            startCountdown(24 * 60 * 60); // 24 Hours in seconds
+        }
 
-<footer>© 2026 Kuruvanshi Krishi Farm House · Premium Quality Seeds</footer>
-<script>
-function setLang(lang){
- document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.dataset[lang]);
- document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
- document.querySelector(lang==='en'?'.lang button:first-child':'.lang button:last-child').classList.add('active');
- document.documentElement.lang=lang;
-}
-</script>
+        function startCountdown(duration) {
+            clearInterval(timerInterval);
+            let timer = duration, hours, minutes, seconds;
+            
+            timerInterval = setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                document.getElementById('countdown').textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('countdown').textContent = "EXPIRED (समय समाप्त)";
+                }
+            }, 1000);
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
