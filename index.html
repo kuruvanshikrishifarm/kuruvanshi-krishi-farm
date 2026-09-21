@@ -1,367 +1,918 @@
-updated_html_content = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuruvanshi Krishi Farm House - Jhajhankheda, Gadarwara</title>
-    <style>
-        :root {
-            --primary-green: #2e7d32;
-            --light-green: #e8f5e9;
-            --accent-gold: #f57f17;
-            --dark-text: #2c3e50;
-            --bg-color: #f4f6f0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--dark-text);
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(135deg, #1b5e20, #2e7d32);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-        }
-        header p {
-            margin: 10px 0 0 0;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        .section-title {
-            text-align: center;
-            color: var(--primary-green);
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #c8e6c9;
-            padding-bottom: 10px;
-        }
-        .crop-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        .crop-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--primary-green);
-            transition: transform 0.2s;
-        }
-        .crop-card:hover {
-            transform: translateY(-3px);
-        }
-        .crop-name {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #1b5e20;
-            margin-bottom: 8px;
-        }
-        .crop-price {
-            font-size: 1.1rem;
-            color: var(--accent-gold);
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .crop-stock {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 12px;
-        }
-        .stock-badge {
-            display: inline-block;
-            background: var(--light-green);
-            color: var(--primary-green);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        .out-of-stock {
-            background: #ffebee;
-            color: #c62828;
-        }
-        
-        /* Booking Form Section */
-        .booking-section {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            margin-top: 30px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #333;
-        }
-        select, input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-        button.submit-btn {
-            background-color: var(--primary-green);
-            color: white;
-            border: none;
-            padding: 14px 20px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.2s;
-        }
-        button.submit-btn:hover {
-            background-color: #1b5e20;
-        }
-        
-        .alert-box {
-            display: none;
-            background: #e8f5e9;
-            border: 1px solid #a5d6a7;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-            color: #1b5e20;
-        }
-        .timer-display {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--accent-gold);
-            margin: 10px 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            margin-top: 50px;
-            font-size: 0.9rem;
-        }
-    </style>
+<title>Kuruwanshi Krishi Farm House</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:#eef7ef;
+    color:#174d2b;
+}
+
+.container{
+    max-width:600px;
+    margin:auto;
+    background:#f8fff9;
+    min-height:100vh;
+}
+
+header{
+    background:#08752b;
+    color:white;
+    text-align:center;
+    padding:28px 15px 24px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+    line-height:1.2;
+}
+
+header p{
+    margin:12px 0 0;
+    font-size:15px;
+    line-height:1.6;
+}
+
+.section-title{
+    text-align:center;
+    padding:25px 15px 15px;
+}
+
+.section-title h2{
+    margin:0;
+    font-size:25px;
+    color:#146b32;
+}
+
+.crop-card{
+    margin:12px 16px;
+    padding:16px;
+    background:white;
+    border-radius:12px;
+    border-left:4px solid #16833a;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+}
+
+.crop-name{
+    font-size:19px;
+    font-weight:bold;
+    color:#176331;
+}
+
+.price{
+    color:#ed6b00;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:6px;
+}
+
+.duration{
+    display:inline-block;
+    background:#d8f4dc;
+    color:#177033;
+    border-radius:15px;
+    padding:5px 10px;
+    margin-top:8px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.description{
+    margin:9px 0 0;
+    font-size:13px;
+    line-height:1.5;
+    color:#444;
+}
+
+.form-box{
+    margin:28px 16px;
+    padding:20px;
+    background:#f5fff6;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.14);
+}
+
+.form-box h2{
+    text-align:center;
+    margin:0 0 20px;
+    color:#176331;
+    font-size:23px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin:13px 0 6px;
+    color:#222;
+    font-size:14px;
+}
+
+.required{
+    color:red;
+}
+
+input,
+select{
+    width:100%;
+    padding:13px 12px;
+    border:1px solid #aaa;
+    border-radius:6px;
+    font-size:15px;
+    background:white;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#16833a;
+}
+
+.total{
+    margin:15px 0;
+    font-size:16px;
+    font-weight:bold;
+    color:#176331;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:6px;
+    background:#08752b;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:disabled{
+    background:#777;
+}
+
+.message{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+    background:#dff5e3;
+    color:#176331;
+    font-weight:bold;
+    line-height:1.6;
+}
+
+.error{
+    display:none;
+    margin-top:15px;
+    padding:12px;
+    border-radius:8px;
+    background:#ffe5e5;
+    color:#a00000;
+    text-align:center;
+}
+
+footer{
+    background:#12352a;
+    color:white;
+    text-align:center;
+    padding:18px 10px;
+    font-size:12px;
+    margin-top:30px;
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>🌾 Kuruvanshi Krishi Farm House</h1>
-        <p>शुद्ध और उच्च quality फसलें सीधे किसान से — झांझंखेड़ा, गाडरवारा, नरसिंहपुर (म.प्र.)</p>
-    </header>
+<div class="container">
 
-    <div class="container">
-        <h2 class="section-title">हमारी प्रीमियम फसलें एवं मूल्य सूची</h2>
-        
-        <div class="crop-grid" id="cropList">
-            <!-- Crops Rendered via JS -->
-        </div>
+<header>
+    <h1>🌿 Kuruwanshi<br>Krishi Farm House</h1>
 
-        <div class="booking-section">
-            <h2 style="margin-top:0; color: var(--primary-green); text-align: center;">📦 फसल बुकिंग फॉर्म (Kisan Booking Portal)</h2>
-            
-            <form action="https://formsubmit.co/seenukaurav09@gmail.com" method="POST" id="bookingForm" onsubmit="handleBooking(event)">
-                <!-- FormSubmit Configuration Settings -->
-                <input type="hidden" name="_subject" value="New Crop Booking from Kuruvanshi Farm Website!">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
+    <p>
+        ताजा, शुद्ध और उच्च गुणवत्ता वाली फसलों के लिए हमसे जुड़ें –
+        स्वस्थ जीवन की ओर एक कदम।
+    </p>
+</header>
 
-                <div class="form-group">
-                    <label for="customerName">किसान / खरीदार का नाम (Full Name):</label>
-                    <input type="text" id="customerName" name="Farmer_Name" required placeholder="अपना पूरा नाम लिखें">
-                </div>
 
-                <div class="form-group">
-                    <label for="customerPhone">मोबाइल नंबर (Mobile Number):</label>
-                    <input type="tel" id="customerPhone" name="Mobile_Number" required placeholder="अपना फोन नंबर लिखें">
-                </div>
+<div class="section-title">
+    <h2>🌱 हमारी प्रीमियम फसलें एवं<br>मूल्य सूची 🌱</h2>
+</div>
 
-                <div class="form-group">
-                    <label for="customerLocation">पता / लोकेशन (Location / Village / City):</label>
-                    <input type="text" id="customerLocation" name="Location" required placeholder="गाँव या शहर का नाम (जैसे: गाडरवारा, झांझंखेड़ा)">
-                </div>
 
-                <div class="form-group">
-                    <label for="cropSelect">फसल चुनें (Select Crop & Variety):</label>
-                    <select id="cropSelect" name="Selected_Crop" required onchange="updateMaxQuantity()">
-                        <option value="">-- फसल चुनें --</option>
-                    </select>
-                </div>
+<!-- CROP 1 -->
 
-                <div class="form-group">
-                    <label for="cropQty">मात्रा - क्विंटल में (Quantity in Quintals):</label>
-                    <input type="number" id="cropQty" name="Quantity_Quintal" min="1" value="1" required oninput="calculateTotal()">
-                </div>
+<div class="crop-card">
 
-                <div class="form-group">
-                    <label>कुल अनुमानित मूल्य (Total Price): <span id="totalPriceDisplay" style="color:var(--accent-gold);">₹0</span></label>
-                    <input type="hidden" id="totalPriceInput" name="Total_Price_Calculation">
-                </div>
-
-                <button type="submit" class="submit-btn">बुकिंग सबमिट करें (Send Booking)</button>
-            </form>
-
-            <div id="successAlert" class="alert-box">
-                <h3 style="margin-top:0; color: #1b5e20;">🎉 आपकी बुकिंग सफलतापूर्व दर्ज हो गई है!</h3>
-                <p>इसकी सूचना किसान (सेनू कौरव) को ईमेल (seenukaurav09@gmail.com) पर भेज दी गई है।</p>
-                <p>यह बुकिंग केवल अगले 24 घंटे तक मान्य (Valid) रहेगी:</p>
-                <div class="timer-display" id="countdownTimer">24:00:00</div>
-                <p>कृपया समय सीमा के भीतर फार्म पर संपर्क करें।</p>
-            </div>
-        </div>
+    <div class="crop-name">
+        🌿 Moong MH 1142
     </div>
 
-    <footer>
-        <p>© 2026 Kuruvanshi Krishi Farm House | Jhajhankheda, Gadarwara, Narsinghpur (MP)</p>
-    </footer>
+    <div class="price">
+        ₹ 11,000 / क्विंटल (₹110/kg)
+    </div>
 
-    <script>
-        // Initial Crop Data with Stock and Rates as requested
-        let crops = [
-            { id: 1, name: "Moong MH 1142", stock: 5, ratePerKg: 110, ratePerQuintal: 11000, desc: "उच्च गुणवत्ता वाली चमकदर मूंग, कीट मुक्त।" },
-            { id: 2, name: "Moong 1762", stock: 10, ratePerKg: 200, ratePerQuintal: 20000, desc: "बढ़िया क्वालिटी की दानेदार मूंग." },
-            { id: 3, name: "Dhaan 1882", stock: 20, ratePerKg: 100, ratePerQuintal: 10000, desc: "मोटे और गोल्डन दाने, शुद्ध धान।" },
-            { id: 4, name: "Dhaan Pusa P1", stock: 24, ratePerKg: 110, ratePerQuintal: 11000, desc: "खुशबूदार और लंबी बासमती धान।" },
-            { id: 5, name: "Soyabeen (Blackgold)", stock: 22, ratePerKg: 90, ratePerQuintal: 9000, desc: "उन्नत किस्म का उच्च अंकुरण क्षमता वाला सोयाबीन।" },
-            { id: 6, name: "Chana Pusa Manav", stock: 20, ratePerKg: 70, ratePerQuintal: 7000, desc: "साफ-सुथरा, पौष्टिक और बड़े आकार का चना।" },
-            { id: 7, name: "Chana Jaki 9218 / Vikram", stock: 4, ratePerKg: 80, ratePerQuintal: 8000, desc: "शुद्ध देशी चना बीज।" }
+    <div class="duration">
+        उपजाक अवधि: 15 दिन
+    </div>
+
+    <div class="description">
+        उच्च गुणवत्ता वाली मूंग, बेहतर पैदावार और अधिक मुनाफा।
+    </div>
+
+</div>
+
+
+<!-- CROP 2 -->
+
+<div class="crop-card">
+
+    <div class="crop-name">
+        🌿 Moong 1762
+    </div>
+
+    <div class="price">
+        ₹ 20,000 / क्विंटल (₹200/kg)
+    </div>
+
+    <div class="duration">
+        उपजाक अवधि: 18 दिन
+    </div>
+
+    <div class="description">
+        बड़ी दाने वाली मूंग, बाजार में अधिक मांग।
+    </div>
+
+</div>
+
+
+<!-- CROP 3 -->
+
+<div class="crop-card">
+
+    <div class="crop-name">
+        🌿 Dhaan 1882
+    </div>
+
+    <div class="price">
+        ₹ 10,000 / क्विंटल (₹100/kg)
+    </div>
+
+    <div class="duration">
+        उपजाक अवधि: 20 दिन
+    </div>
+
+    <div class="description">
+        उच्च उपज देने वाला धान, बेहतर क्वालिटी।
+    </div>
+
+</div>
+
+
+<!-- CROP 4 -->
+
+<div class="crop-card">
+
+    <div class="crop-name">
+        🌿 Dhaan Pusa P1
+    </div>
+
+    <div class="price">
+        ₹ 11,000 / क्विंटल (₹110/kg)
+    </div>
+
+    <div class="duration">
+        उपजाक अवधि: 22 दिन
+    </div>
+
+    <div class="description">
+        मजबूत पौधा, अधिक उपज और अच्छा चावल।
+    </div>
+
+</div>
+
+
+<!-- CROP 5 -->
+
+<div class="crop-card">
+
+    <div class="crop-name">
+        🌿 Soyabean (Blackgold)
+    </div>
+
+    <div class="price">
+        ₹ 9,000 / क्विंटल (₹90/kg)
+    </div>
+
+    <div class="duration">
+        उपजाक अवधि: 22 दिन
+    </div>
+
+    <div class="description">
+        उच्च तेल प्रतिशत वाली सोयाबीन, अच्छी बाजार कीमत।
+    </div>
+
+</div>
+
+
+<!-- CROP 6 -->
+
+<div class="crop-card">
+
+    <div class="crop-name">
+        🌿 Chana Pusa Manav
+    </div>
+
+    <div class="price">
+        ₹ 7,000 / क्विंटल (₹70/kg)
+    </div>
+
+    <div class="duration">
+        उपजाक अवधि: 20 दिन
+    </div>
+
+    <div class="description">
+        रोग प्रतिरोधक चना, अधिक उपज और बेहतर गुणवत्ता।
+    </div>
+
+</div>
+
+
+<!-- CROP 7 -->
+
+<div class="crop-card">
+
+    <div class="crop-name">
+        🌿 Chana Jaki 9218 / Viksan
+    </div>
+
+    <div class="price">
+        ₹ 6,000 / क्विंटल (₹60/kg)
+    </div>
+
+    <div class="duration">
+        उपजाक अवधि: 18 दिन
+    </div>
+
+    <div class="description">
+        अच्छी पैदावार, सूखा सहनशील, बेहतर बाजार मूल्य।
+    </div>
+
+</div>
+
+
+<!-- BOOKING FORM -->
+
+<div class="form-box">
+
+<h2>
+    📦 किसान बुकिंग फॉर्म
+    <br>
+    <small>(Kisan Booking Portal)</small>
+</h2>
+
+
+<form id="bookingForm">
+
+
+<label>
+    किसान / आवेदक का नाम (Full Name)
+    <span class="required">*</span>
+</label>
+
+<input
+    type="text"
+    id="name"
+    name="Name"
+    placeholder="अपना नाम दर्ज करें"
+    required
+>
+
+
+<label>
+    मोबाइल नंबर (Mobile Number)
+    <span class="required">*</span>
+</label>
+
+<input
+    type="tel"
+    id="phone"
+    name="Mobile Number"
+    placeholder="10 अंकों का मोबाइल नंबर"
+    maxlength="10"
+    inputmode="numeric"
+    required
+>
+
+
+<label>
+    गाँव / लोकेशन (Location / Village / City)
+    <span class="required">*</span>
+</label>
+
+<input
+    type="text"
+    id="location"
+    name="Location"
+    placeholder="अपना गाँव या शहर दर्ज करें"
+    required
+>
+
+
+<label>
+    फसल चुनें (Select Crop & Variety)
+    <span class="required">*</span>
+</label>
+
+<select
+    id="crop"
+    name="Crop"
+    required
+>
+
+<option value="">
+    -- फसल चुनें --
+</option>
+
+<option
+    value="Moong MH 1142"
+    data-price="110"
+>
+    Moong MH 1142 - ₹110/kg
+</option>
+
+<option
+    value="Moong 1762"
+    data-price="200"
+>
+    Moong 1762 - ₹200/kg
+</option>
+
+<option
+    value="Dhaan 1882"
+    data-price="100"
+>
+    Dhaan 1882 - ₹100/kg
+</option>
+
+<option
+    value="Dhaan Pusa P1"
+    data-price="110"
+>
+    Dhaan Pusa P1 - ₹110/kg
+</option>
+
+<option
+    value="Soyabean (Blackgold)"
+    data-price="90"
+>
+    Soyabean (Blackgold) - ₹90/kg
+</option>
+
+<option
+    value="Chana Pusa Manav"
+    data-price="70"
+>
+    Chana Pusa Manav - ₹70/kg
+</option>
+
+<option
+    value="Chana Jaki 9218 / Viksan"
+    data-price="60"
+>
+    Chana Jaki 9218 / Viksan - ₹60/kg
+</option>
+
+</select>
+
+
+<label>
+    मात्रा की इकाई (Quantity Unit)
+    <span class="required">*</span>
+</label>
+
+<select
+    id="unit"
+    name="Quantity Unit"
+    required
+>
+
+<option value="kg">
+    किलो (Kg)
+</option>
+
+<option value="quintal">
+    क्विंटल (Quintal)
+</option>
+
+</select>
+
+
+<label>
+    मात्रा (Quantity)
+    <span class="required">*</span>
+</label>
+
+<input
+    type="number"
+    id="quantity"
+    name="Quantity"
+    min="0.1"
+    step="0.1"
+    value="1"
+    placeholder="जैसे 5 या 10"
+    required
+>
+
+
+<input
+    type="hidden"
+    id="quantityDetails"
+    name="Quantity Details"
+>
+
+
+<div class="total">
+
+    कुल अनुमानित मूल्य (Total Price):
+    ₹ <span id="totalPrice">0</span>
+
+</div>
+
+
+<input
+    type="hidden"
+    id="totalHidden"
+    name="Total Price"
+>
+
+
+<button
+    type="submit"
+    id="submitBtn"
+>
+
+    📩 बुकिंग सबमिट करें
+    <br>
+    <small>(Send Booking)</small>
+
+</button>
+
+
+<div
+    class="message"
+    id="successMessage"
+>
+
+    ✅ धन्यवाद! आपकी बुकिंग सफलतापूर्वक भेज दी गई है।<br>
+
+    Owner आपसे जल्द संपर्क करेंगे।
+
+</div>
+
+
+<div
+    class="error"
+    id="errorMessage"
+>
+
+    ❌ बुकिंग भेजने में समस्या हुई।
+    कृपया दोबारा प्रयास करें।
+
+</div>
+
+
+</form>
+
+</div>
+
+
+<footer>
+
+    © 2026 Kuruwanshi Krishi Farm House
+    <br>
+    Maugani Kalan, Badnawar, Ratlam, Madhya Pradesh (M.P.)
+
+</footer>
+
+</div>
+
+
+<script>
+
+/* ================================
+   PRICE CALCULATION
+================================ */
+
+const cropSelect =
+    document.getElementById("crop");
+
+const unitSelect =
+    document.getElementById("unit");
+
+const quantityInput =
+    document.getElementById("quantity");
+
+const totalPrice =
+    document.getElementById("totalPrice");
+
+const totalHidden =
+    document.getElementById("totalHidden");
+
+const quantityDetails =
+    document.getElementById("quantityDetails");
+
+
+function calculateTotal(){
+
+    const selected =
+        cropSelect.options[
+            cropSelect.selectedIndex
         ];
 
-        // Load saved stock from browser local storage if available
-        if(localStorage.getItem('kuruvanshi_crops_v2')) {
-            crops = JSON.parse(localStorage.getItem('kuruvanshi_crops_v2'));
-        }
+    const pricePerKg =
+        Number(
+            selected.dataset.price || 0
+        );
 
-        function renderUI() {
-            const cropListEl = document.getElementById('cropList');
-            const cropSelectEl = document.getElementById('cropSelect');
-            
-            cropListEl.innerHTML = '';
-            cropSelectEl.innerHTML = '<option value="">-- फसल चुनें --</option>';
+    const quantity =
+        Number(
+            quantityInput.value || 0
+        );
 
-            crops.forEach(crop => {
-                let badgeClass = crop.stock > 0 ? 'stock-badge' : 'stock-badge out-of-stock';
-                let stockText = crop.stock > 0 ? `उपलब्ध स्टॉक: ${crop.stock} क्विंटल` : 'Out of Stock (स्टॉक समाप्त)';
-                
-                cropListEl.innerHTML += `
-                    <div class="crop-card">
-                        <div class="crop-name">🌿 ${crop.name}</div>
-                        <div class="crop-price">₹ ${crop.ratePerQuintal.toLocaleString('en-IN')} / क्विंटल (₹${crop.ratePerKg}/kg)</div>
-                        <div class="crop-stock"><span class="${badgeClass}">${stockText}</span></div>
-                        <div style="font-size:0.9rem; color:#666;">${crop.desc}</div>
-                    </div>
-                `;
+    const unit =
+        unitSelect.value;
 
-                if(crop.stock > 0) {
-                    cropSelectEl.innerHTML += `<option value="${crop.name}" data-rate="${crop.ratePerQuintal}" data-max="${crop.stock}">${crop.name} - ₹${crop.ratePerQuintal}/quintal (Max: ${crop.stock} Q)</option>`;
-                }
-            });
-        }
 
-        function updateMaxQuantity() {
-            const select = document.getElementById('cropSelect');
-            const qtyInput = document.getElementById('cropQty');
-            const selectedOption = select.options[select.selectedIndex];
-            
-            if(selectedOption.value) {
-                const maxStock = parseInt(selectedOption.getAttribute('data-max'));
-                qtyInput.max = maxStock;
-                if(parseInt(qtyInput.value) > maxStock) {
-                    qtyInput.value = maxStock;
-                }
+    let total = 0;
+
+
+    /* KG */
+
+    if(unit === "kg"){
+
+        total =
+            pricePerKg * quantity;
+
+    }
+
+
+    /* QUINTAL */
+
+    else{
+
+        /*
+          1 Quintal = 100 Kg
+        */
+
+        total =
+            pricePerKg *
+            quantity *
+            100;
+
+    }
+
+
+    totalPrice.textContent =
+        total.toLocaleString(
+            "en-IN",
+            {
+                maximumFractionDigits:2
             }
-            calculateTotal();
-        }
+        );
 
-        function calculateTotal() {
-            const select = document.getElementById('cropSelect');
-            const qtyInput = document.getElementById('cropQty');
-            const selectedOption = select.options[select.selectedIndex];
-            
-            if(selectedOption && selectedOption.value) {
-                const rate = parseInt(selectedOption.getAttribute('data-rate'));
-                const qty = parseInt(qtyInput.value) || 0;
-                const total = rate * qty;
-                
-                document.getElementById('totalPriceDisplay').innerText = '₹ ' + total.toLocaleString('en-IN');
-                document.getElementById('totalPriceInput').value = '₹ ' + total.toLocaleString('en-IN') + ' (' + qty + ' Quintal)';
-            } else {
-                document.getElementById('totalPriceDisplay').innerText = '₹0';
-                document.getElementById('totalPriceInput').value = '₹0';
+
+    totalHidden.value =
+        "₹ " +
+        total.toLocaleString(
+            "en-IN",
+            {
+                maximumFractionDigits:2
             }
-        }
+        );
 
-        function handleBooking(event) {
-            const select = document.getElementById('cropSelect');
-            const qtyInput = document.getElementById('cropQty');
-            const cropName = select.value;
-            const bookedQty = parseInt(qtyInput.value);
 
-            crops.forEach(crop => {
-                if(crop.name === cropName) {
-                    crop.stock -= bookedQty;
-                    if(crop.stock < 0) crop.stock = 0;
+    quantityDetails.value =
+        quantity +
+        " " +
+        (
+            unit === "kg"
+            ? "Kg"
+            : "Quintal"
+        );
+
+}
+
+
+/* Update price */
+
+cropSelect.addEventListener(
+    "change",
+    calculateTotal
+);
+
+unitSelect.addEventListener(
+    "change",
+    calculateTotal
+);
+
+quantityInput.addEventListener(
+    "input",
+    calculateTotal
+);
+
+
+/* ================================
+   BOOKING FORM
+================================ */
+
+document
+.getElementById("bookingForm")
+.addEventListener(
+"submit",
+async function(event){
+
+    event.preventDefault();
+
+
+    const form = this;
+
+
+    const phone =
+        document
+        .getElementById("phone")
+        .value
+        .trim();
+
+
+    /* Mobile validation */
+
+    if(!/^[0-9]{10}$/.test(phone)){
+
+        alert(
+            "कृपया सही 10 अंकों का मोबाइल नंबर दर्ज करें।"
+        );
+
+        return;
+
+    }
+
+
+    const submitBtn =
+        document.getElementById(
+            "submitBtn"
+        );
+
+    const successMessage =
+        document.getElementById(
+            "successMessage"
+        );
+
+    const errorMessage =
+        document.getElementById(
+            "errorMessage"
+        );
+
+
+    submitBtn.disabled = true;
+
+    submitBtn.innerHTML =
+        "⏳ बुकिंग भेजी जा रही है...";
+
+
+    successMessage.style.display =
+        "none";
+
+    errorMessage.style.display =
+        "none";
+
+
+    try{
+
+        const formData =
+            new FormData(form);
+
+
+        formData.append(
+            "_subject",
+            "New Kisan Booking - Kuruwanshi Krishi Farm House"
+        );
+
+
+        formData.append(
+            "_captcha",
+            "false"
+        );
+
+
+        formData.append(
+            "_template",
+            "table"
+        );
+
+
+        const response =
+            await fetch(
+                "https://formsubmit.co/ajax/seenukaurav09@gmail.com",
+                {
+                    method:"POST",
+
+                    body:formData,
+
+                    headers:{
+                        "Accept":
+                        "application/json"
+                    }
                 }
+            );
+
+
+        if(response.ok){
+
+            successMessage.style.display =
+                "block";
+
+
+            form.reset();
+
+
+            quantityInput.value =
+                1;
+
+
+            totalPrice.textContent =
+                "0";
+
+
+            totalHidden.value =
+                "";
+
+
+            quantityDetails.value =
+                "";
+
+
+            submitBtn.disabled =
+                false;
+
+
+            submitBtn.innerHTML =
+                "📩 बुकिंग सबमिट करें<br><small>(Send Booking)</small>";
+
+
+            successMessage.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
             });
 
-            localStorage.setItem('kuruvanshi_crops_v2', JSON.stringify(crops));
-            
-            // Hide form and show success message with timer
-            document.getElementById('bookingForm').style.display = 'none';
-            document.getElementById('successAlert').style.display = 'block';
-            
-            // Start 24hr countdown timer display
-            startTimer(24 * 60 * 60);
+
         }
 
-        function startTimer(duration) {
-            let timer = duration, hours, minutes, seconds;
-            setInterval(function () {
-                hours = parseInt(timer / 3600, 10);
-                minutes = parseInt((timer % 3600) / 60, 10);
-                seconds = parseInt(timer % 60, 10);
+        else{
 
-                hours = hours < 10 ? "0" + hours : hours;
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
+            throw new Error(
+                "Booking failed"
+            );
 
-                document.getElementById('countdownTimer').textContent = hours + ":" + minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = 0;
-                }
-            }, 1000);
         }
 
-        renderUI();
-    </script>
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+
+        errorMessage.style.display =
+            "block";
+
+
+        submitBtn.disabled =
+            false;
+
+
+        submitBtn.innerHTML =
+            "📩 बुकिंग सबमिट करें<br><small>(Send Booking)</small>";
+
+    }
+
+});
+
+</script>
+
 </body>
 </html>
-"""
-
-import os
-os.makedirs("downloads", exist_ok=True)
-file_path = "downloads/index.html"
-with open(file_path, "w", encoding="utf-8") as f:
-    f.write(updated_html_content)
-    
